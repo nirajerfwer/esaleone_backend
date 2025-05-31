@@ -39,8 +39,9 @@ export const sendDeclineMail = async(customerName:string,gmail:any)=>{
 }
 export const sendGatewayFailurMail = async(customerName:string,gmail:any)=>{
      const subject = "Gateway faiure"
-
-    const ApprovedTemplate = gatewayFailureTemplate(customerName,Date.now.toString());
+const now = new Date(Date.now());
+const formatted = now.toISOString().slice(0, 10);
+    const ApprovedTemplate = gatewayFailureTemplate(customerName,formatted);
 
     await sendConfirmationEmail(gmail,subject, ApprovedTemplate);
 }
