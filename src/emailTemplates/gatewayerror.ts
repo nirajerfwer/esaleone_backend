@@ -4,7 +4,7 @@ export const gatewayFailureTemplate = (customerName: string, date?: string) => {
     <p>Hi <strong>${customerName}</strong>,</p>
     <p>We encountered a technical issue while processing your payment${date ? ` on <strong>${date}</strong>` : ""}.</p>
     <p>Please try again after some time or contact your bank.</p>
-    <p>If the problem continues, reach out to us at <a href="mailto:support@yourshop.com">support@yourshop.com</a>.</p>
-    <p>Regards,<br/><strong>YourShop Team</strong></p>
+    <p>If the problem continues, reach out to us at <a href="mailto:support@eSaleOne.com">support@eSaleOne.com</a>.</p>
+    <p>Regards,<br/><strong>eSaleOne Team</strong></p>
   </div>
 `}

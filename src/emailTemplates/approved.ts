@@ -23,7 +23,7 @@ export const approvedTemplate = (customerName:string,orderId: string, products: 
 
       <p>You will receive another email once your items are shipped.</p>
       <br/>
-      <p>Regards,<br/><strong>YourShop Team</strong></p>
+      <p>Regards,<br/><strong>eSaleOne Team</strong></p>
     </div>
   `;
 };

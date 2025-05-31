@@ -14,7 +14,7 @@ export const sendConfirmationEmail = async (toEmail: string, subject: string, ht
   });
 
   const mailOptions = {
-    from: '"Your Shop" <noreply@yourshop.com>',
+    from: '"Your Shop" <noreply@eSaleOne.com>',
     to: toEmail,
     subject,
     html: htmlContent,

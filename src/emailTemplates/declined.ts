@@ -6,8 +6,8 @@ export const declinedTemplate = (customerName: string, reason?: string) => {
     <p>Unfortunately, your payment was declined.</p>
     ${reason ? `<p><strong>Reason:</strong> ${reason}</p>` : ""}
     <p>Please try again or use a different payment method.</p>
-    <p>If you need assistance, contact <a href="mailto:support@yourshop.com">support@yourshop.com</a>.</p>
-    <p>Regards,<br/><strong>YourShop Team</strong></p>
+    <p>If you need assistance, contact <a href="mailto:support@eSaleOne.com">support@eSaleOne.com</a>.</p>
+    <p>Regards,<br/><strong>eSaleOne Team</strong></p>
   </div>
 `;
 };
