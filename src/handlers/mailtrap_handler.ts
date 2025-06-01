@@ -3,18 +3,21 @@ import { approvedTemplate } from '../emailTemplates/approved';
 import { declinedTemplate } from '../emailTemplates/declined';
 import { gatewayFailureTemplate } from '../emailTemplates/gatewayerror';
 
+require("dotenv").config();
+
 export const sendConfirmationEmail = async (toEmail: string, subject: string, htmlContent: string)=> {
+  
   const transporter = nodemailer.createTransport({
-    host: "sandbox.smtp.mailtrap.io",
-    port: 2525,
+    host: process.env.smtphost || "sandbox.smtp.mailtrap.io",
+    port: Number(process.env.smtpport) || 2525,
     auth: {
-      user: "b960896bb4ead3",
-      pass: "c4f43f67a843cb"
+      user: process.env.mailtrapuser,
+      pass: process.env.mailtrappassword
     }
   });
 
   const mailOptions = {
-    from: '"Your Shop" <noreply@eSaleOne.com>',
+    from: '"EsaleOne" <noreply@eSaleOne.com>',
     to: toEmail,
     subject,
     html: htmlContent,
