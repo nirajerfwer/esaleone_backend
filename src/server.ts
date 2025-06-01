@@ -9,7 +9,8 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
+const mongodbURL:string = process.env.mongoDBURLGlobal || "mongodb+srv://nirajv217:bqTKP0BR55z89Xgy@cluster0.2xdgucy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 app.use(express.json());
 app.use(cors());
@@ -17,8 +18,7 @@ app.use(cors());
 
 async function dbconnection() {
   await mongoose.connect(
-    "mongodb+srv://nirajv217:bqTKP0BR55z89Xgy@cluster0.2xdgucy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    {}
+    mongodbURL,{}
   );
 }
 
